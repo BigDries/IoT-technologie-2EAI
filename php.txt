@@ -1,0 +1,12 @@
+SET PASSWORD FOR 'User'@'Host'=PASSWORD('yourpassword');
+
+FLUSH Privileges
+
+13:56
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'insert_password';
+
+13:59
+/var/log/mysql/error.log
+
+14:02
+update user set authentication_string=password('1111') where user='root';
